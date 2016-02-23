@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Acupus</title>
+		<link rel="stylesheet" href="css/stylesheet.css">
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	</head>
+	<body>
+		<div id="info">
+			<div id="gamescreen">
+				<script type="text/javascript" src="js/melon.js"></script>
+				<script type="text/javascript" src="js/main.js"></script>
+				<script type="text/javascript" src="js/otherents.js"></script>
+				<script type="text/javascript" src="js/gear.js"></script>
+				<script type="text/javascript" src="js/sprite.js"></script>
+				<script type="text/javascript" src="js/character.js"></script>
+				<script type="text/javascript" src="js/player.js"></script>
+				<script type="text/javascript" src="js/enemies.js"></script>
+				<script type="text/javascript" src="js/weapons.js"></script>
+				<script type="text/javascript" src="js/screens.js"></script>
+				<script type="text/javascript" src="js/resources.js"></script>
+				<script type="text/javascript" src="js/run.js"></script>
+				<script type="text/javascript" src="js/soundtrack.js"></script>
+				<div class="level-intro"></div>
+			</div>
+		</div>
+		<div class="controls">
+		<p>Controls:</p>
+		<p class="game-controls">W - jump <br>
+		Enter - Start / Retry<br></p>
+		<p class="dev"> Developer Preview - Design By Tyler Treadwell</p>
+		</div>
+		<div class="audio-section">
+			<audio id="track1" preload="none" preload>
+					<source src="VapourTrail.mp3">
+			</audio>
+			<audio id="track2" preload="none" preload>
+					<source src="VapourTrail.mp3">
+			</audio>
+		</div>
+		<script type="text/javascript">
+		window.onload = function() {
+			    document.getElementById("track1").play();
+			    if(track1.ended){
+			    	document.getElementById("track2").play();
+			    }
+		}
+
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("body").keydown(function(){
+					$(".level-intro").fadeOut("fast");
+				});
+			});
+		</script>
+	</body>
+</html>
